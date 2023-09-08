@@ -10,7 +10,7 @@ from sklearn.model_selection import train_test_split
 
 #Create a coloumn transformer
 ct = make_column_transformer(
-    (StandardScaler(),["age","bmi","children"]),#Turn the values between 0 and 1
+    (StandardScaler(),["age","bmi","children"]),#Turn the values between -3 and 3
     (OneHotEncoder(handle_unknown="ignore"),["sex","smoker","region"])
     )
 #Create X and Y
