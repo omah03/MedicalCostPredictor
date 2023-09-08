@@ -54,8 +54,8 @@ cd your-repo
 The feedforward neural network consists of the following layers:
 
 - Input Layer
-- Hidden Layer 1: Dense layer with 100 neurons and ReLU activation
-- Hidden Layer 2: Dense layer with 10 neurons and ReLU activation
+- Hidden Layer 1: Dense layer with 100 neurons
+- Hidden Layer 2: Dense layer with 10 neurons
 - Output Layer: Dense layer with 1 neuron (typical for regression tasks)
 
 The model is compiled with Mean Absolute Error (MAE) as the loss function and the Adam optimizer.
