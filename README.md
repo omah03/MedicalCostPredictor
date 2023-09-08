@@ -14,12 +14,18 @@ This repository contains the implementation and training of a feedforward neural
 
 ## Overview
 
-In this project, we build and train a feedforward neural network to perform a regression task. The model is designed to predict a continuous target variable based on a set of input features.
+In this project, we build and train a feedforward neural network to perform a regression task. We aim to predict the medical charges based on:
+*age: age of primary beneficiary
+*sex: insurance contractor gender, female, male
+*bmi: Body mass index, providing an understanding of body, weights that are relatively high or low relative to height,
+objective index of body weight (kg / m ^ 2) using the ratio of height to weight, ideally 18.5 to 24.9
+*children: Number of children covered by health insurance / Number of dependents
+*smoker: Smoking
+*region: the beneficiary's residential area in the US, northeast, southeast, southwest, northwest.
 
 ## Dependencies
-
 - TensorFlow
-- Python 3.x
+- Python 3.x 
 - Pandas (for data preprocessing)
 - Matplotlib (for visualization, if needed)
 
@@ -70,6 +76,7 @@ model.compile(
     optimizer=tf.keras.optimizers.Adam(),
     metrics=["mae"]
 )
+history = insurance_model_3.fit(X_train_normal,y_train,epochs=2000,callbacks=[callback],verbose=1)
 ```
 
 ## Training
